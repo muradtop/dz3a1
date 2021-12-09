@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">lesson3</string>
+    <string name="game">Game</string>
+    <string name="image_three">image_three</string>
+    <string name="image_twu">image_twu</string>
+    <string name="image_one">image_one</string>
+    <string name="chair">Chair</string>
+    <string name="book">Book</string>
+    <string name="pen">Pen</string>
+</resources>
