@@ -2,6 +2,7 @@ package com.example.lesson3;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,9 +13,8 @@ public class GameActivity extends AppCompatActivity {
     ImageView imImage;
     Button btn1, btn2, btn3;
     Button btnOne, btnTwo, btnThree;
+    Button btnLevel;
     boolean isjorno, isjotaro, issindzi;
-
-
 
 
     @Override
@@ -24,8 +24,10 @@ public class GameActivity extends AppCompatActivity {
         initialization();
         listeners();
         initView();
+        levelis();
 
     }
+
 
 
 
@@ -37,6 +39,7 @@ public class GameActivity extends AppCompatActivity {
         btnOne = findViewById(R.id.btn_One);
         btnTwo = findViewById(R.id.btn_twu);
         btnThree = findViewById(R.id.btn_three);
+        btnLevel = findViewById(R.id.btn_level);
 
     }
 
@@ -44,7 +47,7 @@ public class GameActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.btn_1:
                 imImage.setImageResource(R.drawable.jorno);
-                 isjorno= true;
+                isjorno = true;
                 isjotaro = false;
                 issindzi = false;
                 break;
@@ -90,23 +93,34 @@ public class GameActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (issindzi) {
                     Toast.makeText(GameActivity.this, "Правильно", Toast.LENGTH_SHORT).show();
-                } else  
+                } else
                     Toast.makeText(GameActivity.this, "НЕ правильно", Toast.LENGTH_LONG).show();
                 return;
+            }
+
+        });
+
+    }
+
+    private void initView() {
+        imImage = findViewById(R.id.im_image);
+        btnOne = findViewById(R.id.btn_1);
+        btnTwo = findViewById(R.id.btn_2);
+        btnThree = findViewById(R.id.btn_3);
+
+    }
+
+    private void levelis() {
+        btnLevel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(GameActivity.this, LevelActivity.class);
+                startActivity(intent);
             }
         });
 
     }
-    private void initView() {
-        imImage =findViewById(R.id.im_image);
-        btnOne = findViewById(R.id.btn_1);
-        btnTwo = findViewById(R.id.btn_2);
-        btnThree = findViewById(R.id.btn_3);
-    }
-
-
-
-    }
+}
 
 
 

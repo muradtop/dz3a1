@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/game"
+        android:text="Найди верный ответ"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -47,7 +47,7 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:onClick="changeImage"
-            android:text="@string/image_one" />
+            android:text="Персонаж1" />
 
         <Button
             android:id="@+id/btn_2"
@@ -55,8 +55,9 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_weight="1"
+
             android:onClick="changeImage"
-            android:text="@string/image_twu" />
+            android:text="Персонаж2" />
 
         <Button
             android:id="@+id/btn_3"
@@ -65,7 +66,7 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:onClick="changeImage"
-            android:text="@string/image_three" />
+            android:text="Персонаж3" />
 
 
     </LinearLayout>
@@ -104,9 +105,26 @@
             android:text="sindzi" />
 
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_one">
+
+
+
+    <Button
+        android:id="@+id/btn_level"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="70sp"
+        android:text="Level #1"/>
 
 
     </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
