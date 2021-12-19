@@ -12,7 +12,7 @@ public class GameActivity extends AppCompatActivity {
     ImageView imImage;
     Button btn1, btn2, btn3;
     Button btnOne, btnTwo, btnThree;
-    boolean isPen,isBook,isChair;
+    boolean isjorno, isjotaro, issindzi;
 
 
 
@@ -43,22 +43,22 @@ public class GameActivity extends AppCompatActivity {
     public void changeImage(View view) {
         switch (view.getId()) {
             case R.id.btn_1:
-                imImage.setImageResource(R.drawable.pen);
-                isPen = true;
-                isBook = false;
-                isChair = false;
+                imImage.setImageResource(R.drawable.jorno);
+                 isjorno= true;
+                isjotaro = false;
+                issindzi = false;
                 break;
             case R.id.btn_2:
-                imImage.setImageResource(R.drawable.book);
-                isBook= true;
-                isChair= false;
-                isPen = false;
+                imImage.setImageResource(R.drawable.jotaro);
+                isjotaro = true;
+                issindzi = false;
+                isjorno = false;
                 break;
             case R.id.btn_3:
-                imImage.setImageResource(R.drawable.chair);
-                isChair = true;
-                isPen = false;
-                isBook= false;
+                imImage.setImageResource(R.drawable.sindzi);
+                issindzi = true;
+                isjorno = false;
+                isjotaro = false;
                 break;
         }
 
@@ -68,7 +68,7 @@ public class GameActivity extends AppCompatActivity {
         btnOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (isPen) {
+                if (isjorno) {
                     Toast.makeText(GameActivity.this, "Правильно", Toast.LENGTH_SHORT).show();
                 } else
                     Toast.makeText(GameActivity.this, "НЕ правильно", Toast.LENGTH_SHORT).show();
@@ -78,7 +78,7 @@ public class GameActivity extends AppCompatActivity {
         btnTwo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (isBook) {
+                if (isjotaro) {
                     Toast.makeText(GameActivity.this, "Правильно", Toast.LENGTH_SHORT).show();
                 } else
                     Toast.makeText(GameActivity.this, "НЕ правильно", Toast.LENGTH_LONG).show();
@@ -88,7 +88,7 @@ public class GameActivity extends AppCompatActivity {
         btnThree.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (isChair) {
+                if (issindzi) {
                     Toast.makeText(GameActivity.this, "Правильно", Toast.LENGTH_SHORT).show();
                 } else  
                     Toast.makeText(GameActivity.this, "НЕ правильно", Toast.LENGTH_LONG).show();

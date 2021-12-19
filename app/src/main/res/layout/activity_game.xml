@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#544"
+    android:background="#FF45"
     tools:context=".GameActivity">
 
     <TextView
@@ -85,7 +85,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_weight="1"
-            android:text="@string/pen" />
+            android:text="jorno" />
 
         <Button
             android:id="@+id/btn_twu"
@@ -93,7 +93,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_weight="1"
-            android:text="@string/book" />
+            android:text="jotaro" />
 
         <Button
             android:id="@+id/btn_three"
@@ -101,7 +101,9 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_weight="1"
-            android:text="@string/chair" />
+            android:text="sindzi" />
+
+
 
 
     </LinearLayout>
